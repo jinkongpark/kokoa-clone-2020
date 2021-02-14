@@ -1,0 +1,59 @@
+<!-- html 작성할때는 작성할 것의 스케치를 옆에놓고 위에서부터 블록을 만들어 나간다
+id를 쓰지말고 모두 class를 쓰도록한다. id와 섞어 쓰면 나중에 헷갈린다
+블록에 의존하는 것(버튼이 가지는 것)은 __로 연결하고, 블록의 속성을 바꿔주는 것은 --로 연결한다 
+이렇게 쓰면 코드를 보고 어떤 클라스가 어떻게 작용하는지 쉽게 알 수 있다 (BEM: id를 안쓰고
+클라스 만으로 구분)
+
+자바 스크립트는 body를 닫기 바로 직전에 들어간다
+
+몇개의 태그 엘리먼트를 전체에서 만들지를 고려해서 class 이름을 지어 준다-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Kokoa Clone</title>
+</head>
+<body>
+    <div class="status-bar">
+        <div class="status-bar__column">
+            <span>No Service</span>
+            <i class="fas fa-wifi"></i>
+            
+        </div>
+        <div class="status-bar__column">
+            <span>18:43</span>
+        </div>
+        <div class="status-bar__column">
+            <span>110%</span>
+            <i class="fas fa-battery-full fa-lg"></i>
+            <i class="fas fa-bolt"></i>
+        </div>
+    </div>
+
+    <header class="welcome-header">
+        <h1 class="welcome-header__title">Welcome to Kokoa Clone</h1>
+        <p class="welcome-header__text">
+            If you have a KoKoa Account, log in with your email or phone number.
+        </p>
+
+    </header>
+
+    <!-- action은 어떤 페이지로 이 데이터를 보낼지 정하는 것, method는 post와 get 두가지 옵션이 있는데 post는 backend 서버로 정보를 전송하는 방식이고 get은 url에 보이는 방식이고 insecure하다 -->
+    <form action="friends.html" method="get" id="login-form">
+        <input name="username" type="text" placeholder="Email or phone number" />
+        <input name="password" type="password" placeholder="Password" />
+        <input type="submit" value="Log In" />
+        <a href="#">Find Kokoa Account or Password</a>
+    </form>
+
+    <div id="no-mobile">
+        <span>Your screen is too bit ㅠ.ㅠ</span>
+    </div>
+
+    <script src="https://kit.fontawesome.com/3acef908cb.js" crossorigin="anonymous"></script>
+</body>
+</html>
